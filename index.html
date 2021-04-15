@@ -6,8 +6,15 @@
   <title>Document</title>
 </head>
 <body>
-  Master 
-  <p>我是新修改的 2.0.0</p>
-  <p>2 update 1</p>
+  <p id="demo">Snapshot of HTML Living Standard. Creation of WindowBase64 (properties were on the target before it).</p>
+  <p id="demo_txt"></p>
+  <script type="text/javascript">
+    let str = document.getElementById("demo").innerHTML;
+    let encodeStr = window.btoa(str);
+
+    document.getElementById("demo_txt").innerText = encodeStr;
+    console.log('解码');
+    console.log(window.atob(encodeStr));
+  </script>
 </body>
 </html>
